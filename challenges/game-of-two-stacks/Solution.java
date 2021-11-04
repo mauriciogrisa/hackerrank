@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
     
-    public static int createNewSumArray(int maxSum, List<Integer> arr) {
+    public static int updateListWithCumulativeSum(int maxSum, List<Integer> arr) {
         int sum = 0;        
         int end = 0;
         for(end = 0; end < arr.size(); end++) {
@@ -28,8 +28,8 @@ class Result {
     
     public static int twoStacks(int maxSum, List<Integer> a, List<Integer> b) {
                 
-        int endA = createNewSumArray(maxSum, a);
-        int endB = createNewSumArray(maxSum, b);
+        int endA = updateListWithCumulativeSum(maxSum, a);
+        int endB = updateListWithCumulativeSum(maxSum, b);
         
         int totalMoves = endB;
         
